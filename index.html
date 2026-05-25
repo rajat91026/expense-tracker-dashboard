@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Expense Tracker</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Chart JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+
+    <div class="title">
+      <i class="fa-solid fa-chart-line"></i>
+      Expense Tracker
+    </div>
+
+    <!-- Cards -->
+
+    <div class="top-cards">
+
+      <div class="card">
+        <i class="fa-solid fa-money-bill-trend-up income-icon"></i>
+        <h2>Income</h2>
+        <div class="amount" id="income">₹0</div>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-money-bill-wave expense-icon"></i>
+        <h2>Expense</h2>
+        <div class="amount" id="expense">₹0</div>
+      </div>
+
+      <div class="card">
+        <i class="fa-solid fa-wallet balance-icon"></i>
+        <h2>Balance</h2>
+        <div class="amount" id="balance">₹0</div>
+      </div>
+
+    </div>
+
+    <!-- Form -->
+
+    <div class="form">
+
+      <input type="text" id="title"
+      placeholder="Enter title">
+
+      <input type="number" id="amount"
+      placeholder="Enter amount">
+
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+
+      <button onclick="addTransaction()">
+        <i class="fa-solid fa-plus"></i>
+        Add
+      </button>
+
+    </div>
+
+    <!-- Transactions -->
+
+    <div id="transactions"
+    class="transactions"></div>
+
+    <!-- Chart -->
+
+    <canvas id="chart"></canvas>
+
+  </div>
+
+  <!-- JS -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
